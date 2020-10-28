@@ -1,0 +1,14 @@
+.checkLabel{
+    font-size: 15px;
+    
+    color: #696F79;
+    display: inline;
+
+}
+
+.check{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: inline-block;
+}

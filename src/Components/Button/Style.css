@@ -1,0 +1,16 @@
+.btn{
+    border: none;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width:340px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 12px;
+}
+
+.photo{
+    position: relative;
+    left:-50px;
+    top: 5px;
+}

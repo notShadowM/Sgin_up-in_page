@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+
+.Container{
+    display: flex;
+    height: 754px; 
+    font-family: Inter;  
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    width:45%;
+    /* background-color: #1565D8; */
+    padding-top:40px;
+    padding-left: 80px;
+    background: 
+    linear-gradient(
+        hsl(215, 82%, 46%,0.9), 
+        hsl(215, 82%, 46%,0.9) 
+      ),
+    url(../../assets/back.jpg);
+    background-repeat: no-repeat;
+    background-size: 542px 754px;
+}
+
+
+.right{
+    width: 55%;
+    text-align: left;
+    margin-left: 80px;
+}
+
+.typography{
+    margin-top: 55px;
+}
+
+.heading{
+    font-size: 27px;
+}
+
+.para{
+    margin-top: 10px;
+    font-size: 16px;
+    color:#8692A6;
+    width: 370px;
+    height: 56px;
+    line-height: 1.5;
+}
+
+.register{
+    margin-left: 55px;
+}
+
+.left p{
+    margin-top: 120px;
+}
+
+.corner{
+    text-align: right;
+}
+
+.vector{
+    position: relative;
+    left: -80px;
+    bottom: -86px;
+}
+
+.orBlock{
+    margin-top: 10px;
+}
+
+.line{
+    /* margin-left: 3px ;
+    margin-right: 3px ; */
+}
+
+.or{
+    color: #BABABA;
+    font-size:10px;
+}
+
+.google{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+button{
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+label{
+    user-select: none;
+}
