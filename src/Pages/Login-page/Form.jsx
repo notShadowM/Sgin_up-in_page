@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Input from "../../Components/Input";
 import Checkbox from "../../Components/Checkbox";
 import Button from "../../Components/Button";
-import "./Style.css";
+import "./style.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import * as yup from "yup";
 
@@ -10,13 +10,8 @@ class Form extends Component {
   state = {
     email: "",
     password: "",
-    rePassword: "",
     check: false,
-    errors: {
-      email: "",
-      password: "",
-      rePassword: "",
-    },
+    errors: {},
   };
 
   // handleChange = (e) => {
@@ -39,23 +34,15 @@ class Form extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password, rePassword } = this.state;
+    const { email, password } = this.state;
 
     const signUpSchema = yup.object().shape({
       email: yup.string().email().required(),
       password: yup.string().required(),
-      rePassword: yup
-        .string()
-        .test(
-          "match testing",
-          "This passowrd doesn't match the previous one",
-          (value) => value === password
-        )
-        .required(),
     });
 
     signUpSchema
-      .validate({ email, password, rePassword }, { abortEarly: false })
+      .validate({ email, password }, { abortEarly: false })
       .then((data) => {
         this.setState({ errors: {} });
       })
@@ -69,7 +56,7 @@ class Form extends Component {
   };
 
   render() {
-    const { email, password, rePassword, check, errors } = this.state;
+    const { email, password, errors } = this.state;
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <Input
@@ -77,8 +64,8 @@ class Form extends Component {
           name="email"
           type="email"
           value={email}
-          label="Email address*"
-          holder="Enter email address"
+          label="Your email"
+          holder="Write your email"
           handleChange={this.handleChange}
           error={errors.email}
         />
@@ -87,37 +74,24 @@ class Form extends Component {
           name="password"
           type="password"
           value={password}
-          label="Create password*"
-          holder="Password"
+          label="Enter your password"
+          holder="•••••••••"
           handleChange={this.handleChange}
           error={errors.password}
         />
-        <Input
-          id="rePassword"
-          name="rePassword"
-          type="password"
-          value={rePassword}
-          label="Repeat password*"
-          holder="Repeat password"
-          handleChange={this.handleChange}
-          error={errors.rePassword}
-        />
-        <Checkbox
-          id="checkbox"
-          name="check"
-          type="checkbox"
-          value={check}
-          label="I agree to terms &amp; conditions"
-          holder="Repeat password"
-          handleChange={this.handleChange}
-        />
-
         <Button
           type="submit"
-          text="Register Account"
+          text="Login"
           bgcolor="#1565D8"
           color="white"
+          className="margin-btn"
         />
+        <p className="question">
+          Don't have an account?
+          <Link to="/">
+            <span className="switch">Register</span>
+          </Link>
+        </p>
       </form>
     );
   }

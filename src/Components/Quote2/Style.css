@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+
+.quote2{
+    width:  350px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 38px;
+    color: #696F79;
+}
+
+.small_icon2{
+    display: block;
+    font-family: Gayathri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    align-items: center;
+    color: #BABABA;
+    height: 25px;
+}
+
+.kojima2{
+    display: block;
+    margin-top: 40px;
+}
+
+
